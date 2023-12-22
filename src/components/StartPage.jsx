@@ -82,8 +82,8 @@ const StartPage = () => {
           <div className="icon-history"></div>
         </header>
 
-        <div className="w-11/12 font-semibold text-slate-100 px-7 mx-2 sm:justify-start text-center">
-          <p className="text-center">
+        <div className="w-11/12 font-semibold text-slate-100 px-7 mx-2 my-8 sm:justify-center justify-start">
+          <p className="text-center sm:text-start">
             Desde pequeño siempre tuve la curiosidad de saber como funcionaban
             los dispositivos electrónicos, hasta tal punto que me empecé a
             interesar en el desarrollo de aplicaciones para estos dispositivos,
