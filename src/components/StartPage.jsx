@@ -82,25 +82,19 @@ const StartPage = () => {
           <div className="icon-history"></div>
         </header>
 
-        <div className="w-full font-semibold text-slate-100 px-7 text-start">
-          Desde pequeño siempre tuve un interés muy grande por la{" "}
-          <span className="text-sky-500">tecnología</span> a tal punto que
-          siempre trataba de averiguar como funcionaban las cosas en los
-          aparatos electrónicos como el computador, trataba de llevarlos a su
-          limite para ver de que eran capaces, pero poco a poco me fui
-          interesando en crear{" "}
-          <span className="text-fuchsia-500">aplicaciones</span> para los
-          dispositivos y al salir del colegio me dediqué a aprender un poco por
-          las <span className="text-sky-500">aplicaciones móviles</span> y
-          llegué a crear varias que lastimosamente terminé perdiendo. Postorior{" "}
-          a ello, en la universidad empecé a cursar una materia llamada
-          <span className="text-fuchsia-500">
-            {" "}
-            Desarrollo de aplicaciones web
-          </span>{" "}
-          y me envolvió demasiado este tema, pues desde entonces no he hecho mas
-          que intentar aprender sobre las tecnologías, frameworks y lenguajes
-          utilizados para crear este tipo de aplicaciones
+        <div className="w-11/12 font-semibold text-slate-100 px-7 mx-2 sm:justify-start text-center">
+          <p className="text-center">
+            Desde pequeño siempre tuve la curiosidad de saber como funcionaban
+            los dispositivos electrónicos, hasta tal punto que me empecé a
+            interesar en el desarrollo de aplicaciones para estos dispositivos,
+            empezando por las{" "}
+            <span className="text-fuchsia-400">aplicaciones móviles</span>, de
+            las cuales terminé creando algunas aplicaciones que terminé
+            perdiendo, pero al entrar a la universidad me atraí por las
+            <span className="text-sky-400"> aplicaciones web</span> y desde
+            entonces he estado estudiando lenguajes, frameworks y tecnología
+            necesarias para crear este tipo de aplicaciones
+          </p>
         </div>
       </section>
 
@@ -146,7 +140,7 @@ const StartPage = () => {
 
       <hr className="border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
 
-      <section className="contacto w-full">
+      <section className="contacto w-full flex flex-col">
         <header className="flex items-center font-bold text-2xl w-full justify-center sm:justify-start text-gray-100 gap-1 mb-7">
           <h1>Contáctame</h1>
           <div className="icon-contact"></div>
@@ -154,13 +148,13 @@ const StartPage = () => {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="grid grid-cols gap-6 justify-center md:justify-start px-7 w-min"
+          className="flex flex-col gap-6 justify-center sm:justify-start px-7 w-full"
         >
           <input
             type="text"
             name="user_name"
             placeholder="Nombre"
-            className="focus:border-sky-400 duration-100 h-8 rounded-md px-6 "
+            className="focus:border-sky-400 duration-100 h-8 rounded-md px-6"
           />
           <input
             type="email"
