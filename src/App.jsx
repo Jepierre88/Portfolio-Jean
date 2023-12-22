@@ -6,7 +6,7 @@ function App() {
     //Rutas del portafolio, de momento solo hay una
     <BrowserRouter>
       <Routes>
-        <Route path="/Portfolio" element={<HomePage />}></Route>
+        <Route path="/Portfolio-Jean" element={<HomePage />}></Route>
       </Routes>
     </BrowserRouter>
   );

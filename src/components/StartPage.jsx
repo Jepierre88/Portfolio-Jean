@@ -30,7 +30,7 @@ const StartPage = () => {
   };
 
   return (
-    <main className="flex flex-col gap-12">
+    <main className="flex flex-col gap-12 justify-center">
       <section className="flex flex-col sm:flex-row items-center gap-5">
         <span className="my-picture rounded-full h-40 mr-7 "></span>
         <section>
@@ -77,7 +77,7 @@ const StartPage = () => {
       <hr className="border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
 
       <section className="historia w-full">
-        <header className="flex items-center font-bold text-2xl text-gray-100 gap-1">
+        <header className="flex items-center sm:justify-start justify-center font-bold text-2xl text-gray-100 gap-1">
           <h1>Mi historia</h1>
           <div className="icon-history"></div>
         </header>
@@ -107,7 +107,7 @@ const StartPage = () => {
       <hr className="border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
 
       <section className="estudios w-full">
-        <header className="flex items-center font-bold text-2xl text-gray-100 gap-1">
+        <header className="flex items-center font-bold text-2xl w-full justify-center sm:justify-start text-gray-100 gap-1">
           <h1>Estudios</h1>
           <div className="icon-tool"></div>
         </header>
@@ -119,7 +119,7 @@ const StartPage = () => {
                 Instituto Tecnológico Metropolitano
               </h1>
               <h2 className="text-l text-center sm:text-xl font-semibold text-fuchsia-400 md:text-start">
-                Teconología en Desarrollo de Software
+                Tecnología en Desarrollo de Software
               </h2>
               <p className="font-semibold text-sky-300 text-center md:text-start">
                 Enero 2022 - Enero 2025
@@ -147,7 +147,7 @@ const StartPage = () => {
       <hr className="border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
 
       <section className="contacto w-full">
-        <header className="flex items-center font-bold text-2xl text-gray-100 gap-1 mb-7">
+        <header className="flex items-center font-bold text-2xl w-full justify-center sm:justify-start text-gray-100 gap-1 mb-7">
           <h1>Contáctame</h1>
           <div className="icon-contact"></div>
         </header>
