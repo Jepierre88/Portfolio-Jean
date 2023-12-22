@@ -8,25 +8,52 @@ const StartPage = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     const { user_name, user_mail, message } = form.current.elements;
-
     console.log({ user_name, user_mail, message });
 
-    emailjs
-      .sendForm(
-        "portfolio_jepierre_mail",
-        "portfolio_template",
-        form.current,
-        "TNFn8XLtIsaQnrZJT"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    e.target.reset();
+    const formData = [];
+    formData.push(user_name.value);
+    formData.push(user_mail.value);
+    formData.push(message.value);
+
+    const isValid = formData.indexOf("") == -1;
+    console.log(isValid);
+
+    if (isValid) {
+      emailjs
+        .sendForm(
+          "portfolio_jepierre_mail",
+          "portfolio_template",
+          form.current,
+          "TNFn8XLtIsaQnrZJT"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+      e.target.reset();
+    }
+    if (user_name.value === "") {
+      document.getElementById("nameErr").style.display = "block";
+      setTimeout(() => {
+        document.getElementById("nameErr").style.display = "none";
+      }, 6000);
+    }
+    if (user_mail.value === "") {
+      document.getElementById("emailErr").style.display = "block";
+      setTimeout(() => {
+        document.getElementById("emailErr").style.display = "none";
+      }, 6000);
+    }
+    if (message.value === "") {
+      document.getElementById("messageErr").style.display = "block";
+      setTimeout(() => {
+        document.getElementById("messageErr").style.display = "none";
+      }, 6000);
+    }
   };
 
   return (
@@ -150,18 +177,30 @@ const StartPage = () => {
           onSubmit={sendEmail}
           className="flex flex-col gap-6 justify-center sm:justify-start px-7 w-full"
         >
+          <p id="nameErr" className="text-red-500 px-7 w-10/12 font-semibold">
+            Inserta un nombre válido
+          </p>
           <input
             type="text"
             name="user_name"
             placeholder="Nombre"
             className="focus:border-sky-400 duration-100 h-8 rounded-md px-6"
           />
+          <p id="emailErr" className="text-red-500 px-7 w-10/12 font-semibold">
+            Inserta un correo válido
+          </p>
           <input
             type="email"
             name="user_mail"
             placeholder="Correo"
             className="focus:border-sky-400 duration-100 h-8 rounded-md px-6"
           />
+          <p
+            id="messageErr"
+            className="text-red-500 px-7 w-10/12 font-semibold"
+          >
+            Inserta un mensaje válido
+          </p>
           <textarea
             type="text"
             name="message"

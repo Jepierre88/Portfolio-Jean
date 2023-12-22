@@ -88,6 +88,15 @@
 .contacto button:hover{
   filter: drop-shadow(0 0 10px skyblue);
 }
+#nameErr{
+  display: none;
+}
+#emailErr{
+  display: none;
+}
+#messageErr{
+  display: none;
+}
 
 .my-name{
   overflow: hidden;
