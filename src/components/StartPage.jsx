@@ -35,6 +35,7 @@ const StartPage = () => {
           }
         );
       e.target.reset();
+      return true;
     }
     if (user_name.value === "") {
       document.getElementById("nameErr").style.display = "block";
@@ -177,8 +178,11 @@ const StartPage = () => {
           onSubmit={sendEmail}
           className="flex flex-col gap-6 justify-center sm:justify-start px-7 w-full"
         >
-          <p id="nameErr" className="text-red-500 px-7 w-10/12 font-semibold">
-            Inserta un nombre válido
+          <p
+            id="nameErr"
+            className="flex items-center font-bold text-sm w-full justify-center sm:justify-start text-red-400 gap-1"
+          >
+            Nombre inválido
           </p>
           <input
             type="text"
@@ -186,8 +190,11 @@ const StartPage = () => {
             placeholder="Nombre"
             className="focus:border-sky-400 duration-100 h-8 rounded-md px-6"
           />
-          <p id="emailErr" className="text-red-500 px-7 w-10/12 font-semibold">
-            Inserta un correo válido
+          <p
+            id="emailErr"
+            className="flex items-center font-bold text-sm w-full justify-center sm:justify-start text-red-400 gap-1"
+          >
+            Correo inválido
           </p>
           <input
             type="email"
@@ -197,9 +204,9 @@ const StartPage = () => {
           />
           <p
             id="messageErr"
-            className="text-red-500 px-7 w-10/12 font-semibold"
+            className="flex items-center font-bold text-sm w-full justify-center sm:justify-start text-red-400 gap-1"
           >
-            Inserta un mensaje válido
+            Mensaje inválido
           </p>
           <textarea
             type="text"
