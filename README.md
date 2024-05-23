@@ -1,3 +1,3 @@
 # React + Vite
 
-Portafolio creado bajo el framework de React usando vite
+Portafolio creado bajo el framework de Vite usando React
